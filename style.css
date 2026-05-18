@@ -48,6 +48,17 @@ nav a:hover {
     background: linear-gradient(to bottom right, #111111, #1e1e1e);
 }
 
+.hero-image {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    border: 4px solid #8b5cf6;
+
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+}
+
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 20px;
