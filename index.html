@@ -1,78 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Vancouver Tutor</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Vancouver Tutor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="logo">Your Name Tutoring</div>
+  <header>
+    <div class="logo">Your Name Tutoring</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="nav-cta">Book a session</a>
+    </nav>
+  </header>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="subjects.html">Subjects</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="personal blog.html">Personal Blog</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+  <div class="hero">
+    <div class="eyebrow">Vancouver · Online</div>
+    <h1>Your tagline goes here — make it count</h1>
+    <img src="images/tutor.jpg" alt="Photo of Your Name" class="hero-image">
+    <p>A sentence or two about who you help and what you do differently.</p>
+    <a href="contact.html" class="button">Book a free consultation →</a>
+  </div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Private Tutor in Vancouver & Online</h1>
+  <div class="section">
+    <div class="eyebrow">About me</div>
+    <div class="about-text">
+      <h2>Your short intro headline</h2>
+      <p>Your background paragraph — degree, experience, what drives you to tutor.</p>
+      <p>Your teaching philosophy or approach.</p>
+    </div>
+  </div>
 
-            <img src="images/tutor.jpg" alt="Tutor Photo" class="hero-image">
+  <div class="section alt-bg">
+    <div class="eyebrow">Subjects</div>
+    <p style="color: var(--text-muted);">A short line about the range of subjects you cover.</p>
+    <div class="card-grid">
+      <div class="card"><h3>Mathematics</h3><p>Algebra, Pre-Calculus, Calculus, Statistics</p></div>
+      <div class="card"><h3>Sciences</h3><p>Biology, Chemistry, Physics</p></div>
+      <div class="card"><h3>Study Skills</h3><p>Study habits, time management, exam prep</p></div>
+    </div>
+    <div style="margin-top: 24px;"><a href="subjects.html" class="button-outline">See all subjects →</a></div>
+  </div>
 
-            <p>
-                Helping high school and university students improve grades,
-                confidence, and study habits.
-            </p>
+  <div class="section">
+    <div class="eyebrow">What students say</div>
+    <div class="testimonial">
+      <blockquote>"A short, punchy quote from a student or parent."</blockquote>
+      <div class="testimonial-attr"><strong>Student Name</strong> · Grade / Course</div>
+    </div>
+    <div class="testimonial">
+      <blockquote>"Another quote from a student or parent."</blockquote>
+      <div class="testimonial-attr"><strong>Student Name</strong> · Grade / Course</div>
+    </div>
+    <div style="margin-top: 24px;"><a href="testimonials.html" class="button-outline">Read more →</a></div>
+  </div>
 
-            <a href="#contact" class="button">
-                Book a Free Consultation
-            </a>
-        </div>
-    </section>
+  <div class="section alt-bg" style="text-align: center;">
+    <div class="eyebrow">Get started</div>
+    <h2 style="font-size: 22px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 12px;">Ready to improve your grades?</h2>
+    <p style="color: var(--text-muted); max-width: 400px; margin: 0 auto 28px;">Book a free 30-minute consultation to see if we're a good fit.</p>
+    <a href="contact.html" class="button">Book a free consultation →</a>
+  </div>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-
-        <p>
-            Hi, I'm Your Name. I have a background in molecular biology and strong
-            experience in mathematics, science, and problem solving.
-            I provide personalized tutoring for students across the Lower Mainland,
-            both in-person and online.
-        </p>
-
-        <p>
-            My goal is to help students build confidence and truly understand concepts,
-            not just memorize them.
-        </p>
-    </section>
-
-    <section id="subjects" class="section dark-section">
-        <h2>Subjects Offered</h2>
-
-        <div class="card-grid">
-            <div class="card">
-                <h3>Mathematics</h3>
-                <p>
-                    Algebra, Pre-Calculus, Calculus, Statistics
-                </p>
-            </div>
-
-        </div>
-
-    </section>
+  <footer>
+    <div class="inner">
+      <div class="footer-logo">Your Name Tutoring</div>
+      <div class="footer-links">
+        <a href="subjects.html">Subjects</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-copy">© 2025 Your Name. Based in Vancouver, BC.</div>
+    </div>
+  </footer>
 
 </body>
 </html>
