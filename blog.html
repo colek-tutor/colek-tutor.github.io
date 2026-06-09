@@ -1,88 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Your Name Tutoring</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .accordion { margin-top: 36px; border-top: 1px solid var(--border); }
 
-    <link rel="stylesheet" href="style.css">
+    .accordion-item { border-bottom: 1px solid var(--border); }
+
+    .accordion-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .accordion-trigger:hover .accordion-title { color: var(--green); }
+
+    .accordion-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+      transition: color 0.15s;
+    }
+
+    .accordion-icon {
+      font-size: 20px;
+      color: var(--green);
+      font-weight: 300;
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+      line-height: 1;
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(45deg);
+    }
+
+    .accordion-body {
+      display: none;
+      padding-bottom: 32px;
+      max-width: 680px;
+    }
+
+    .accordion-item.open .accordion-body { display: block; }
+
+    .accordion-body p {
+      font-size: 16px;
+      color: var(--text-body);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+
+    .accordion-body p:last-child { margin-bottom: 0; }
+
+    .accordion-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 28px 0 10px;
+    }
+
+    .accordion-body ul {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    .accordion-body ul li {
+      font-size: 16px;
+      color: var(--text-body);
+      line-height: 1.8;
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+
+    .accordion-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 15px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
+  <header>
+    <div class="logo">Your Name Tutoring</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html" class="nav-cta">Book a session</a>
+    </nav>
+  </header>
 
-        <div class="logo">
-            Your Name Tutoring
+  <div class="page-header">
+    <div class="eyebrow">Blog</div>
+    <h1>My tutoring philosophy</h1>
+    <p>
+      Thoughts on learning, teaching, and what actually helps students improve.
+      Click any topic to read more.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="accordion">
+
+      <!-- Post 1 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-title">Why I focus on learning, not grades</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>
+            Early in my tutoring experience, I focused heavily on helping students improve their grades as quickly as possible.
+            At first, this seemed successful — students performed better on tests, completed assignments more confidently, and earned stronger marks.
+          </p>
+          <p>
+            However, I began to notice a recurring problem: many students could repeat procedures they had memorized, but struggled
+            when questions changed slightly, or concepts appeared in unfamiliar ways. This changed how I think about tutoring.
+          </p>
+          <p>
+            I realized that improving grades without improving understanding is often temporary. Students may perform well in the short term,
+            but if learning is based only on memorization and repetition, concepts are often forgotten soon after the exam.
+          </p>
+          <p>
+            There is certainly a place for repetition and practice — however, repetition is most effective after understanding has been
+            developed, not in place of it.
+          </p>
+          <p>
+            For example, in algebra or calculus, a student may learn to mechanically follow steps to solve a derivative or factor an expression.
+            But if a problem changes slightly, many students freeze because they were memorizing a process rather than understanding the logic behind it.
+          </p>
+          <p>Instead, I focus on helping students understand:</p>
+          <ul>
+            <li>Why a method works</li>
+            <li>When to use it</li>
+            <li>How to adapt it to unfamiliar situations</li>
+            <li>How concepts connect together</li>
+          </ul>
+          <p>
+            Once understanding develops, stronger grades tend to follow naturally. When students truly understand concepts, they become
+            more confident, solve problems more independently, and retain knowledge for longer. My goal is not simply to prepare students
+            for the next quiz — it is to help them build the skills needed for future courses and increasingly difficult subjects.
+          </p>
+
+          <h3>My approach to practice</h3>
+          <p>
+            I do not believe in assigning endless repetitive work simply for the sake of repetition. Practice is important, but it should be purposeful.
+          </p>
+          <p>
+            If a student needs more repetition to strengthen a concept, I will absolutely recommend targeted practice. However, I prefer
+            to assign work intentionally based on where a student struggles rather than overwhelming them with unnecessary volume.
+          </p>
+          <p>
+            For example, if a student struggles with factoring or trigonometric identities, I may assign focused practice to reinforce
+            weak areas. But if understanding is already strong, I would rather spend time helping students think critically, solve unfamiliar
+            problems, and strengthen long-term learning habits.
+          </p>
+          <p>
+            My goal is to help students become confident learners who understand concepts deeply and gradually become less dependent on tutoring over time.
+          </p>
         </div>
+      </div>
 
-        <nav>
-
-            <a href="index.html">Home</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="subjects.html">Subjects</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="blog.html">Personal Blog</a>
-            <a href="contact.html">Contact</a>
-
-        </nav>
-
-    </header>
-
-    <section class="section">
-
-        <h2>Personal Blog</h2>
-
-        <p>
-            Welcome to my tutoring and study blog.
-            Here I share study tips, productivity advice,
-            exam preparation strategies, and educational content.
-        </p>
-
-        <div class="card-grid">
-
-            <div class="card">
-
-                <h3>
-                    How to Study More Efficiently
-                </h3>
-
-                <p>
-                    Learning how to study effectively can improve
-                    grades while reducing stress and burnout.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-                    Common Calculus Mistakes
-                </h3>
-
-                <p>
-                    Many students struggle with the same concepts in calculus.
-                    Here are the most common mistakes and how to avoid them.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-                    Building Better Study Habits
-                </h3>
-
-                <p>
-                    Consistency and structure are often more important
-                    than studying long hours.
-                </p>
-
-            </div>
-
+      <!-- Post 2 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-title">Why I only offer 1-on-1 sessions</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>
+            I intentionally focus on 1-on-1 tutoring because I believe students learn best when they receive individualized attention.
+            I have chosen not to offer group lessons because they limit the level of attention, personalization, and feedback each student receives.
+          </p>
+          <p>
+            Learning difficult subjects such as Mathematics and Sciences is not only about arriving at the correct answer — it is about
+            understanding the process of why we take certain steps to reach that answer.
+          </p>
+          <p>
+            A large part of my role as a tutor is to observe a student's thought process in real time. When a student works through a problem,
+            I pay close attention to how they move from one idea to the next, where confusion begins, what assumptions are being made, and
+            how they reason through mistakes. This allows me to identify misunderstandings early and guide them toward stronger problem-solving habits.
+          </p>
+          <p>
+            For example, two students may arrive at the same incorrect answer for completely different reasons. One student may struggle with
+            algebraic manipulation, while another may misunderstand the underlying concept entirely. Effective tutoring requires understanding
+            these differences and adapting accordingly.
+          </p>
+          <p>
+            For me, tutoring has never been about maximizing the number of students in a session. My priority is providing meaningful support
+            and high-quality instruction that genuinely benefits the student — giving each student the time, patience, and individualized
+            guidance they deserve so they can build confidence, strengthen understanding, and become more independent learners over time.
+          </p>
         </div>
+      </div>
 
-    </section>
+      <!-- Post 3 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-title">Why I believe math is teachable to everyone</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>
+            I truly believe that everyone is capable of learning mathematics. I was not always naturally strong in math — I struggled
+            with calculus in high school and during my first year of university, so I understand what many students experience:
+            frustration, confusion, and the feeling that everyone else somehow "gets it."
+          </p>
+          <p>
+            Difficulty in Mathematics is often misunderstood. It requires a high level of abstraction — the ability to understand patterns,
+            structures, and ideas that cannot always be seen or physically experienced. Whether it is multidimensional spaces in linear algebra,
+            infinite sets in proofs, or rates of change in calculus, Mathematics asks us to think differently than many other subjects.
+          </p>
+          <p>
+            Because of this, struggling with math does not mean someone is unintelligent or lacks talent. More often, it means the foundations
+            are weak, the concepts were introduced too quickly, or the student simply has not yet found a way of learning that works for them.
+            Like building physical strength, mathematical thinking can be developed through practice, patience, and the right guidance.
+          </p>
+          <p>
+            My own perspective changed while working as a chemical laboratory analyst. I became increasingly curious about how data was
+            interpreted, analyzed, and used to make decisions — which pushed me to revisit mathematics from the ground up. I rebuilt my
+            foundation by relearning pre-calculus, then continued into calculus out of genuine interest.
+          </p>
+          <p>
+            Since then, I have pursued advanced coursework in calculus, linear algebra, proofs, ODEs/PDEs, probability, and statistics —
+            not simply to pass exams, but to truly understand how mathematical thinking works. Today, I teach with the belief that students
+            can improve when concepts are explained clearly and patiently.
+          </p>
+        </div>
+      </div>
+
+      <!-- Post 4 -->
+      <div class="accordion-item">
+        <button class="accordion-trigger">
+          <span class="accordion-title">How I teach: adapting to every student</span>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          <p>
+            Every student learns differently. Some learn best through visual explanations and diagrams, while others learn through
+            practice problems, discussion, repetition, or connecting ideas to real-world examples. Because of this, I spend the early
+            stages of tutoring understanding how each student learns best and adapting lessons to fit their style.
+          </p>
+          <p>
+            One of the biggest challenges students face is that schools often teach <em>what</em> to learn, but rarely teach <em>how</em> to learn.
+            This becomes especially important in Mathematics and Sciences where memorization alone is not enough.
+          </p>
+          <p>
+            As part of tutoring, I introduce evidence-based study strategies and help students experiment with approaches that work best for them:
+          </p>
+          <ul>
+            <li><strong>The Feynman Technique</strong> — learning by explaining concepts in simple language</li>
+            <li><strong>Spaced Recall</strong> — reviewing material strategically over time to improve retention</li>
+            <li><strong>Active Recall</strong> — strengthening understanding through deliberate self-testing</li>
+            <li><strong>Concept Mapping</strong> — building connections between ideas to improve understanding</li>
+            <li><strong>Structured Problem Solving</strong> — approaching unfamiliar problems by breaking them into smaller, manageable parts</li>
+          </ul>
+          <p>
+            My experience working in research and laboratory settings has also shaped how I teach. Research requires patience, curiosity,
+            and the ability to think critically when answers are not immediately obvious — habits I aim to help students build as well.
+          </p>
+          <p>
+            Ultimately, my goal is to help students become <em>less</em> dependent on tutoring over time, not more. I want them to develop
+            the skills, confidence, and study habits needed to approach difficult subjects independently and succeed long after tutoring ends.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section alt-bg" style="text-align: center;">
+    <div class="eyebrow">Work together</div>
+    <h2 style="font-size: 26px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; margin-bottom: 14px;">
+      Ready to get started?
+    </h2>
+    <p style="color: var(--text-muted); max-width: 400px; margin: 0 auto 32px;">
+      Book a free 30-minute consultation to see if we're a good fit.
+    </p>
+    <a href="contact.html" class="button">Book a free consultation →</a>
+  </div>
+
+  <footer>
+    <div class="inner">
+      <div class="footer-logo">Your Name Tutoring</div>
+      <div class="footer-links">
+        <a href="subjects.html">Subjects</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-copy">© 2025 Your Name. Based in Vancouver, BC.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.accordion-item');
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+
+        // Open clicked one (unless it was already open)
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
