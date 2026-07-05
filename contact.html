@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Colek Tutoring</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header>
+  <header>
+    <div class="logo">Colek Tutoring</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="nav-cta">Book a session</a>
+    </nav>
+  </header>
 
-        <div class="logo">
-            Your Name Tutoring
-        </div>
+  <div class="page-header">
+    <div class="eyebrow">Contact</div>
+    <h1>Book a free consultation</h1>
+    <p>Fill out the form and I'll get back to you within 24 hours.</p>
+  </div>
 
-        <nav>
+  <div class="section">
+    <!--
+      Sign up free at https://formspree.io, create a form,
+      then replace YOUR_FORM_ID below with your actual ID.
+    -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-            <a href="index.html">Home</a>
-            <a href="subjects.html">Subjects</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="blog.html" class="active">Blog</a>
-            <a href="contact.html" class="nav-cta">Book a session</a>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+      </div>
 
-        </nav>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+      </div>
 
-    </header>
+      <div class="form-row">
+        <label for="subject">Subject or grade level</label>
+        <input type="text" id="subject" name="subject" placeholder="e.g. Grade 12 Calculus, First-year Biology">
+      </div>
 
-    <section class="section">
+      <div class="form-row">
+        <label for="format">Preferred format</label>
+        <select id="format" name="format">
+          <option value="">Select one</option>
+          <option value="in-person">In-person (Vancouver / Lower Mainland)</option>
+          <option value="online">Online</option>
+          <option value="either">Either works</option>
+        </select>
+      </div>
 
-        <h2>Contact</h2>
+      <div class="form-row">
+        <label for="message">Anything else (optional)</label>
+        <textarea id="message" name="message" placeholder="What are you working on or struggling with?"></textarea>
+      </div>
 
-        <p>
-            Welcome to my tutoring and study blog.
-            Here I share study tips, productivity advice,
-            exam preparation strategies, and educational content.
-        </p>
+      <button type="submit" class="button" style="align-self: flex-start; border: none; cursor: pointer;">
+        Send message →
+      </button>
 
-        <div class="card-grid">
+    </form>
+  </div>
 
-            <div class="card">
+  <div class="section alt-bg">
+    <div class="eyebrow">Or reach me directly</div>
+    <div class="numbered-list">
+      <div class="numbered-item"><span class="item-num">✉</span><span class="item-title">youremail@example.com</span></div>
+      <div class="numbered-item"><span class="item-num">→</span><span class="item-title">I typically respond within 24 hours</span></div>
+    </div>
+  </div>
 
-                <h3>
-                    How to Study More Efficiently
-                </h3>
-
-                <p>
-                    Learning how to study effectively can improve
-                    grades while reducing stress and burnout.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-                    Common Calculus Mistakes
-                </h3>
-
-                <p>
-                    Many students struggle with the same concepts in calculus.
-                    Here are the most common mistakes and how to avoid them.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>
-                    Building Better Study Habits
-                </h3>
-
-                <p>
-                    Consistency and structure are often more important
-                    than studying long hours.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
+  <footer>
+    <div class="inner">
+      <div class="footer-logo">Colek Tutoring</div>
+      <div class="footer-links">
+        <a href="subjects.html">Subjects</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-copy">© 2025 Colek Tutoring. Based in Vancouver, BC.</div>
+    </div>
+  </footer>
 
 </body>
 </html>
