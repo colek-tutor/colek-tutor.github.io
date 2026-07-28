@@ -95,8 +95,16 @@ nav a.nav-cta:hover { background: var(--green-dark); color: #fff; }
   margin-bottom: 24px;
 }
 .hero-image {
-  width: 128px; height: 128px; border-radius: 50%;
-  object-fit: cover; border: 2px solid var(--border); margin: 32px 0;
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 2px solid var(--border);
+
+    margin: 40px 0;
 }
 .hero p {
   font-size: 18px;
