@@ -23,54 +23,24 @@
     </nav>
   </header>
 
-  <div class="page-header">
+    <div class="page-header">
     <div class="eyebrow">Contact</div>
-    <h1>Book a free consultation and 2 free trial lessons</h1>
-    <p>Fill out the form and I'll get back to you within 24 hours.</p>
+    <h1>Book a free consultation</h1>
+    <p>
+      Fill out the form below and I'll get back to you within 24 hours
+      to arrange a free intro call and two trial lessons — no commitment required.
+    </p>
   </div>
 
+  <!-- Google Form embed -->
   <div class="section">
-    <!--
-      Sign up free at https://formspree.io, create a form,
-      then replace YOUR_FORM_ID below with your actual ID.
-    -->
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required>
-      </div>
-
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-      </div>
-
-      <div class="form-row">
-        <label for="subject">Subject or grade level</label>
-        <input type="text" id="subject" name="subject" placeholder="e.g. Grade 12 Calculus, First-year Biology">
-      </div>
-
-      <div class="form-row">
-        <label for="format">Preferred format</label>
-        <select id="format" name="format">
-          <option value="">Select one</option>
-          <option value="in-person">In-person (Vancouver / Lower Mainland)</option>
-          <option value="online">Online</option>
-          <option value="either">Either works</option>
-        </select>
-      </div>
-
-      <div class="form-row">
-        <label for="message">Anything else (optional)</label>
-        <textarea id="message" name="message" placeholder="What are you working on or struggling with?"></textarea>
-      </div>
-
-      <button type="submit" class="button" style="align-self: flex-start; border: none; cursor: pointer;">
-        Send message →
-      </button>
-
-    </form>
+    <div style="
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    ">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe5ZYs9jR7dNrzD2Zf8gvcYzj-qKmtn04YjdeUzpE1MECkqKg/viewform?embedded=true" width="640" height="1183" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
   </div>
 
   <div class="section alt-bg">
